@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #4b573e;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+    color: white;
+}
+
+nav p {
+    padding-left: 30px;
+}
+
+ul li {
+   
+    list-style: none;
+    text-decoration: none;
+    
+}
+
+ul {
+    display: flex;
+    gap: 15px;
+}
+
+ul a {
+    text-decoration: none;
+color: white;
+}
+
+.li1:hover {
+    color: #FFF97D;
+}
+
+.li2:hover {
+    text-decoration:underline;
+    color: black;
+    transition: 0.3s;
+}
+
+.li3:hover {
+    color: gray;
+}
+
+li i {
+    padding-left: 45px;
+    padding-right: 15px;
+    font-size: 20px;
+}
+
+.li3 {
+    padding-right: 50px;
+}
+
+.section1 {
+text-align: center;
+justify-content: center;
+width: 100%;
+height: 900px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.right img {
+    width: 540px;;
+    height:900px;
+    
+}
+
+.left {
+    background-color: #FFF97D;
+    align-items: center;
+    width: 60%;
+    height: 900px;
+    color: #4b573e;
+    position: relative;
+    
+}
+
+.left div {
+    position: absolute;
+    top: 35%;
+    width: 670px;
+}
+.left p {
+    font-size: 20px;
+}
+
+.left h1 {
+    
+    font-size: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+   
+}
+
+
+
+
+.left button {
+    margin-top: 30px;
+    background-color: #f0c0d0;
+    border: 1px solid #4b573e;
+    border-radius: 20px;
+    padding: 15px 27px 15px 27px;
+    color: #4b573e;
+    
+}
+
+.left button:hover {
+    background-color: #4b573e;
+    color: #f0c0d0;
+    transition: 0.4s;
+}
+
+.section2 {
+    background-color: #f0c0d0;
+        text-align: center;
+        align-items: center;
+    width: 100%;
+    height: 400px;
+    color: #4b573e;
+    position: relative;
+}
+
+.section2 div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 60%;
+}
+
+.section2 h1 {
+    font-size: 60px;
+    padding-bottom: 30px;
+}
+
+.section2 p {
+    padding-bottom:30px;
+
+}
+
+.section2 h3 {
+    margin-bottom: 10px;
+}
+
+.section2 button {
+    background-color: #4b573e;
+    border: 1px solid white;
+    color: white;
+    padding: 12px 22px 12px 22px;
+    border-radius: 20px;
+    transition: background-color  0.5s ease;
+}
+
+.section2 button:hover {
+    background-color: #FFF97D;
+    color:#4b573e;
+    border: 1px solid #4b573e;
+    transition: 0.4s;
+}
+
