@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -15,14 +17,20 @@ nav {
     position: relative;
 }
 
+nav a {
+    text-decoration: none;
+}
+
 nav p {
+    text-decoration: none;
     padding-left: 30px;
+    color: white;
 }
 
 ul li {
    
     list-style: none;
-    text-decoration: none;
+    
     
 }
 
@@ -56,7 +64,7 @@ color: white;
     height: 20px;
     position: absolute;
     right: 255px;
-    opacity: 0;
+    opacity: 1;
 }
 
 .bag2 {
@@ -112,7 +120,7 @@ height: 900px;
 .right img {
     width: 540px;;
     height:900px;
-    transform: scale();
+
 }
 
 .left {
@@ -152,7 +160,7 @@ height: 900px;
     border-radius: 20px;
     padding: 15px 27px 15px 27px;
     color: #4b573e;
-    
+    transition: background-color  0.5s ease;
 }
 
 .left button:hover {
@@ -208,6 +216,64 @@ height: 900px;
     color:#4b573e;
     border: 1px solid #4b573e;
     transition: 0.4s;
+}
+
+.racket {
+    width: 100%;
+    height: 100vh;
+    border:1px solid gray
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-auto-rows: 50%;
+    
+}
+
+
+
+.grid4 h1 {
+    width: 200px;
+}
+
+.grid div {
+    width: 700px;
+    height: 200px;
+    border: 1px solid #4b573e;
+    position: relative;
+}
+
+.grid div h1 {
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+}
+
+.maingrid {
+    background-color: #FFF97D;
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+.maingrid button {
+    position: absolute;
+    left: 47%;
+    top: 85%;
+    background-color: #4b573e;
+    color: #FFF97D;
+    border-radius: 25px;
+    padding: 10px 15px 10px 15px;
+    transition: background-color 0.5s ease;
+    border: 1px solid #4b573e;
+}
+
+.maingrid button:hover {
+    background-color: #FFF97D;
+    color: #4b573e;
+    transition: 0.5s;
 }
 
 
