@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Lexend;
+}
+
+body {
+    background-color: #FFF97D;
+    
+}
+
+@font-face {
+    font-family:Lexend;
+    src: url(Lexend-VariableFont_wght.ttf);
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #4b573e;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+    color: white;
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav p {
+    text-decoration: none;
+    padding-left: 30px;
+    color: white;
+}
+
+ul li {
+   
+    list-style: none;
+    
+    
+}
+
+ul {
+    display: flex;
+    gap: 15px;
+}
+
+ul a {
+    text-decoration: none;
+color: white;
+}
+
+.bag i {
+    color: black;
+    font-size: 25px;
+    position: absolute;
+    right: 380px;
+    gap: 30px;
+}
+.bag p {
+    position: absolute;
+    top: 28px;
+    right: 380px;
+    font-size: 14px;
+    color:#FFF97D;
+}
+
+.bag input {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 374px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.bag2 {
+    position: fixed;
+    
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 360px;
+    background-color: #FFF97D;
+    color: #4b573e;
+    z-index: 1;
+    border-left: 1px solid #4b573e;
+    transform: translateX(100%); 
+    transition: transform 0.32s ease;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+}
+
+nav .bag input:checked ~ .bag2 {
+    transform: translateX(0);
+}
+
+
+/* Keep header at the top; center only the paragraph inside the panel */
+.bag2 h1 {
+    margin: 18px 0 8px;
+    text-align: center;
+    color: inherit;
+}
+
+
+
+
+.bag2 h2 {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.bag2 hr {
+    width: 80%;
+    margin: 0 auto 12px;
+    border: 1px solid #4b573e
+    ;
+}
+.bag2 p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    text-align: center;
+    width: 85%;
+    color: #4b573e;
+font-size:  20px;
+}
+
+.li1 {
+    padding-right:40px ;
+}
+
+
+.li1:hover {
+    color: #FFF97D;
+}
+
+.li2:hover {
+    text-decoration:underline;
+    color: black;
+    transition: 0.3s;
+}
+
+.li3:hover {
+    color: gray;
+}
+
+li i {
+    padding-left: 45px;
+    padding-right: 15px;
+    font-size: 20px;
+}
+
+.li3 {
+    padding-right: 155px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+main a div {
+    
+    height: 500px;
+    width: 400px;
+    border: 1px solid black;
+    z-index: 9;
+    background-color: #FFF97D;
+}
