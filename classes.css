@@ -257,28 +257,37 @@ li i {
 
 
 
-.coaches h1 {
+.coaches span {
     font-size: 70px;
     padding-bottom: 10px;
     padding-left: 20px;
 }
-
-.coaches .left1 p {
+.coaches .oiu {
     padding-left: 30px;
+}
 
+.coaches .left1 .rara {
+    padding-left: 30px;
+    width: 600px;
+    position: absolute;
+    top: 30px;
+    right: 100px;
 }
 
 
 /* Coaches layout: horizontal two-column that wraps on small screens */
 .coaches {
+    position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;       /* allow columns to stack on small screens */
   gap: 24px;
+  height: 200px;
   width: 100%;
   box-sizing: border-box;
   align-items: flex-start; /* align top of columns */
   padding: 16px 0;
+  border: 1px solid black;
 }
 
 /* Left column inside coaches (text block) */
@@ -301,6 +310,17 @@ li i {
   text-align: left;
 }
 
+.coaches .text {
+    width: 200px;
+}
+
+.left1 {
+    width: 200px;
+    height: auto;
+}
+
+
+
 /* Ensure paragraph text doesn't force width/scroll */
 .coaches .right1 p {
   margin: 0;
@@ -314,6 +334,8 @@ li i {
 .coaches .right1 p {
     width: 60%;
 }
+
+
 
 
 footer {
@@ -454,6 +476,85 @@ footer h1 {
     margin-right: 95px;
 }
 
+.person {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.person1 {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    border: 1px solid black;
+}
+
+.rightimg1 {
+    background-image: url("https://static.wixstatic.com/media/28c15a232093473db2f64e3aba1e7b87.jpg/v1/fill/w_562,h_908,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/28c15a232093473db2f64e3aba1e7b87.jpg");
+    min-width: 300px;
+    height: 400px;
+    background-size: 100% 100%;
+    background-position:center center center center;
+    background-repeat: no-repeat;
+    margin-right: 30px;
+    border: 1px solid black;
+}
+
+.lefttext1 {
+    max-height: 400px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+.lefttext1 p {
+    width: 600px;
+    padding-bottom: 20px;
+}
+
+.rightimg2 {
+    background-image: url("https://static.wixstatic.com/media/1e5f0a813fe34326889f97e0f9e6aa05.jpg/v1/fill/w_562,h_906,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/1e5f0a813fe34326889f97e0f9e6aa05.jpg");
+    min-width: 300px;
+    height: 400px;
+    background-size: 100% 100%;
+    background-position:center center center center;
+    background-repeat: no-repeat;
+    margin-right: 30px;
+    border: 1px solid black;
+}
+
+.lefttext2 {
+    max-height: 400px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+.lefttext2 p {
+    width: 600px;
+    padding-bottom: 20px;
+}
+
+.rightimg3 {
+    background-image: url("https://static.wixstatic.com/media/11062b_24c3911afe9948e999ae3bce716bca99~mv2.jpg/v1/fill/w_794,h_906,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_24c3911afe9948e999ae3bce716bca99~mv2.jpg");
+    min-width: 300px;
+    height: 400px;
+    background-size: 100% 100%;
+    background-position:center center center center;
+    background-repeat: no-repeat;
+    margin-right: 30px;
+    border: 1px solid black;
+}
+
+.lefttext3 {
+    max-height: 400px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+.lefttext3 p {
+    width: 600px;
+    padding-bottom: 20px;
+}
+
+
+
 @media screen and (max-width:950px) {
     
     nav ul {
@@ -498,6 +599,11 @@ footer h1 {
     height: 700px;
   }
 
+  .coaches .rara {
+    top: 150px !important;
+    left:  10px !important;
+  }
+
   .coaches {
     flex-direction: column;
     height: auto;
@@ -521,60 +627,121 @@ footer h1 {
   }
 
   .gridmain {
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-  width: 100%;
-  height: auto;
-  box-sizing: border-box;
-  border: none; 
-  text-align: center;
-  align-items: center;
-  margin: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        border: none;
+        text-align: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    .gridmain>div {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #4b573e;
+        padding: 16px;
+        background: transparent;
+    }
+
+    .gribs1 {
+        position: static;
+        grid-column: auto;
+        height: auto;
+        z-index: auto;
+        width: 100%;
+    }
+
+    .gribs1 .texttt {
+        position: static;
+        width: 100%;
+        margin: 0;
+        height: auto;
+        padding: 0;
+    }
+
+    .gribs1 .texttt input.h {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto ;
+    }
+
+    .griden {
+        display: flex;
+        flex-direction: column;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    .grod {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        height: auto;
+        padding: 16px;
+    }
+
+    main img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    main h1 {
+        padding-left: 0;
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    .numbr {
+        text-align: center;
+    }
+
+    .inner {
+        width: 100%;
+        max-width: 300px;
+        margin: auto;
+        padding: 0;
+    }
+
+    .gribs2,
+    .gribs .privacy {
+        position: static;
+        width: 100%;
+        padding: 8px 0;
+    }
+
+    .gribs .privacy a {
+        display: block;
+        margin-bottom: 6px;
+    }
+
+    .person1 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .person1 .rightimg1,
+    .person1 .rightimg2,
+    .person1 .rightimg3 {
+        min-width: 100%;
+        min-height: 500px;
 }
 
-.gridmain > div {
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  border: 1px solid #4b573e; 
-  padding: 16px;
-  background: transparent;
+@media screen and (min-width:950px) {
+    .mobilenav {
+        display: none;
+    }
 }
 
-
-.gribs1 {
-  position: static;
-  grid-column: auto;
-  height: auto;
-  z-index: auto;
-  width: 100%;
-}
-
-.gribs1 .texttt {
-  position: static;
-  width: 100%;
-  margin: 0;
-  height: auto;
-  padding: 0;
-}
-
-.gribs1 .texttt input.h {
-  width: 100%;
-  max-width: 420px;
-    margin: 0 auto 12px;
-}
-}
 
   .coaches .right1 p {
     margin: 0 0 0 0;
   }
-
-
-   
-
-
-
     .grid {
   display: flex;
   flex-direction: column;
@@ -648,6 +815,10 @@ footer h1 {
   width: 100%;
 }
 
+.person1 .hahaha {
+    width: 300px;
+}
+
 .gribs1 .texttt {
   position: static;
   width: 100%;
@@ -656,10 +827,15 @@ footer h1 {
   padding: 0;
 }
 
+.coaches .rara {
+   width: 300px !important;
+  }
+
+
+
 .gribs1 .texttt input.h {
   width: 100%;
   max-width: 420px;
-    margin: 0 auto 12px;
+    
 }
-
-
+}
