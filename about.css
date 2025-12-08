@@ -547,11 +547,11 @@ main {
 }
 
 main div {
-  width: 92%;           /* nearly full width with small gutters */
-  max-width: 420px;     /* keep original card max width */
+  width: 92%;           
+  max-width: 420px;     
   box-sizing: border-box;
-  margin: 0 auto;       /* center each card */
-  height: auto;         /* allow height to grow with content */
+  margin: 0 auto;       
+  height: auto;         
 }
 
 /* Ensure images scale inside the stacked cards */
@@ -566,6 +566,10 @@ main h1 {
   padding-left: 0;
   padding-top: 30px;
   text-align: center;
+}
+
+main button {
+    margin-bottom: 30px;
 }
 
 .numbr {

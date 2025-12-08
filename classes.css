@@ -2,17 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Lexend;
+    font-family:Lexend;
 }
 
 body {
     background-color: #FFF97D;
+    
 }
 
 @font-face {
-    font-family: Lexend;
+    font-family:Lexend;
     src: url(Lexend-VariableFont_wght.ttf);
 }
+
+
 
 nav {
     display: flex;
@@ -31,8 +34,13 @@ nav a {
 }
 
 nav p {
+    text-decoration: none;
     padding-left: 30px;
     color: white;
+}
+
+ul li {
+    list-style: none;
 }
 
 ul {
@@ -40,29 +48,24 @@ ul {
     gap: 15px;
 }
 
-ul li {
-    list-style: none;
-}
-
 ul a {
     text-decoration: none;
-    color: white;
+color: white;
 }
 
-/* cart */
 .bag i {
     color: black;
     font-size: 25px;
     position: absolute;
     right: 380px;
+    gap: 30px;
 }
-
 .bag p {
     position: absolute;
     top: 28px;
     right: 380px;
     font-size: 14px;
-    color: #FFF97D;
+    color:#FFF97D;
 }
 
 .bag input {
@@ -84,20 +87,24 @@ ul a {
     color: #4b573e;
     z-index: 1;
     border-left: 1px solid #4b573e;
-    transform: translateX(100%);
+    transform: translateX(100%); 
     transition: transform 0.32s ease;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.18);
 }
 
-nav .bag input:checked~.bag2 {
+nav .bag input:checked ~ .bag2 {
     transform: translateX(0);
 }
+
 
 .bag2 h1 {
     margin: 18px 0 8px;
     text-align: center;
     color: inherit;
 }
+
+
+
 
 .bag2 h2 {
     position: absolute;
@@ -110,8 +117,8 @@ nav .bag input:checked~.bag2 {
     width: 80%;
     margin: 0 auto 12px;
     border: 1px solid #4b573e;
+    
 }
-
 .bag2 p {
     position: absolute;
     top: 50%;
@@ -121,19 +128,20 @@ nav .bag input:checked~.bag2 {
     text-align: center;
     width: 85%;
     color: #4b573e;
-    font-size: 20px;
+font-size:  20px;
 }
 
 .li1 {
-    padding-right: 40px;
+    padding-right:40px;
 }
+
 
 .li1:hover {
     color: #FFF97D;
 }
 
 .li2:hover {
-    text-decoration: underline;
+    text-decoration:underline;
     color: black;
     transition: 0.3s;
 }
@@ -152,7 +160,6 @@ li i {
     padding-right: 155px;
 }
 
-/* mobile nav helpers */
 .fa-bars {
     display: none !important;
 }
@@ -176,7 +183,7 @@ li i {
     opacity: 0;
 }
 
-.LALA:checked~.mobilenav {
+.LALA:checked ~ .mobilenav {
     left: 0;
     transition: 0.3s;
     position: absolute;
@@ -208,36 +215,106 @@ li i {
 .mobilenav hr {
     border: 1px solid white;
 }
-
-
-main {
-    display: block;
-    margin: 0;
-    padding: 0 16px;
+.first {
+ display: flex;
+  flex-direction: row;
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  /* optional: remove fixed height to allow content to size naturally */
+  min-height: 800px;
 }
 
-.griden {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    
-    align-items: start;
-    width: 100%;
-    box-sizing: border-box;
+/* Left column (text / controls) */
+.left {
+  width: 40%;
+  box-sizing: border-box;
+  padding: 16px;
+  border: 1px solid black;
 }
 
-.yoyo {
-    text-align: center;
-    margin: 40px 0 20px 0;
+.left .kk {
+    font-size: 30px;
+    padding-bottom: 20px;
 }
 
-.grod {
-    width: 100%;
-    height: 400px;
-    background-color: inherit;
-    border: 1px solid black;
-    box-sizing: border-box;
-    padding: 16px;
+.left .uiui {
+    font-size: 45px;
+    line-height: 1.6;
 }
+
+ 
+
+.right {
+    background-image: url("https://static.wixstatic.com/media/88aac0_72111925216440c68c9c09bbed2caab4~mv2.png/v1/fill/w_1389,h_2048,al_c,q_95,enc_avif,quality_auto/88aac0_72111925216440c68c9c09bbed2caab4~mv2.png");
+  width: 60%;
+  box-sizing: border-box;
+  padding: 16px;
+  background-size: cover;
+  background-position: center center;
+  height: auto;
+}
+
+
+
+.coaches h1 {
+    font-size: 70px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.coaches .left1 p {
+    padding-left: 30px;
+
+}
+
+
+/* Coaches layout: horizontal two-column that wraps on small screens */
+.coaches {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;       /* allow columns to stack on small screens */
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: flex-start; /* align top of columns */
+  padding: 16px 0;
+}
+
+/* Left column inside coaches (text block) */
+.coaches .left1 {
+  flex: 1 1 320px;      /* grow/shrink, base width 320px */
+  min-width: 260px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Right column inside coaches (bio/description) */
+.coaches .right1 {
+  flex: 1 1 320px;
+  min-width: 260px;
+  box-sizing: border-box;
+  margin-left: 60%;       /* remove hard-coded offset */
+  display: block;       /* simple block for text */
+  text-align: left;
+}
+
+/* Ensure paragraph text doesn't force width/scroll */
+.coaches .right1 p {
+  margin: 0;
+  line-height: 1.6;
+  max-width: 100%;
+  
+}
+
+
+
+.coaches .right1 p {
+    width: 60%;
+}
+
 
 footer {
     height: 600px;
@@ -249,7 +326,7 @@ footer h1 {
     padding: 10px 20px 10px 20px;
 }
 
-.gribs .gribs1 .gribs2 div .privacy {
+.gribs .gribs1 .gribs2 div .privacy{
     border: none;
 }
 
@@ -274,6 +351,7 @@ footer h1 {
     border-radius: 8px;
 }
 
+
 .gribs1 {
     position: relative;
     grid-column: span 2;
@@ -294,6 +372,11 @@ footer h1 {
     position: absolute;
     top: 20%;
     left: 5%;
+}
+
+
+
+.gribs1 .texttt {
     font-size: 20px;
 }
 
@@ -303,6 +386,9 @@ footer h1 {
     padding: 6px 18px 6px 18px;
     border-radius: 20px;
     margin-bottom: 10px;
+}
+
+.gribs1 .texttt .h {
     width: 250px;
 }
 
@@ -344,7 +430,7 @@ footer h1 {
     position: relative;
 }
 
-.gribs .privacy {
+.gribs .privacy  {
     position: absolute;
     top: 40%;
     left: 20%;
@@ -353,6 +439,7 @@ footer h1 {
     border: none;
     text-align: center;
     align-items: center;
+    
 }
 
 .gribs .privacy a {
@@ -367,14 +454,13 @@ footer h1 {
     margin-right: 95px;
 }
 
-/* Responsive: stack on small screens */
 @media screen and (max-width:950px) {
-
+    
     nav ul {
         display: none;
     }
 
-    .fa-bars {
+.fa-bars {
         display: block !important;
         color: white;
         font-size: 25px;
@@ -395,104 +481,185 @@ footer h1 {
         cursor: pointer;
         z-index: 1001;
     }
+    
+  .first {
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px;
+    min-height: auto;
+  }
 
-    .gridmain {
-        display: flex;
-        flex-direction: column;
-        padding: 16px;
-        width: 100%;
-        height: auto;
-        box-sizing: border-box;
-        border: none;
-        text-align: center;
-        align-items: center;
-        margin: auto;
-    }
+  .left,
+  .right {
+    width: 100%;
+  }
 
-    .gridmain>div {
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-        border: 1px solid #4b573e;
-        padding: 16px;
-        background: transparent;
-    }
+  .right {
+    height: 700px;
+  }
 
-    .gribs1 {
-        position: static;
-        grid-column: auto;
-        height: auto;
-        z-index: auto;
-        width: 100%;
-    }
+  .coaches {
+    flex-direction: column;
+    height: auto;
+    
+  }
 
-    .gribs1 .texttt {
-        position: static;
-        width: 100%;
-        margin: 0;
-        height: auto;
-        padding: 0;
-    }
+  .coaches .right1 {
+    margin-left: 0;
+    margin-top: 50px;
+  }
 
-    .gribs1 .texttt input.h {
-        width: 100%;
-        max-width: 420px;
-        margin: 0 auto ;
-    }
+  .coaches {
+    flex-direction: column;
+    padding: 12px;
+    gap: 12px;
+  }
+  .coaches .left1,
+  .coaches .right1 {
+    width: 100%;
+    min-width: 0;
+  }
 
-    .griden {
-        display: flex;
-        flex-direction: column;
-        padding: 0 16px;
-        box-sizing: border-box;
-    }
-
-    .grod {
-        width: 100%;
-        max-width: 900px;
-        margin: 0 auto;
-        height: auto;
-        padding: 16px;
-    }
-
-    main img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    main h1 {
-        padding-left: 0;
-        padding-top: 30px;
-        text-align: center;
-    }
-
-    .numbr {
-        text-align: center;
-    }
-
-    .inner {
-        width: 100%;
-        max-width: 300px;
-        margin: auto;
-        padding: 0;
-    }
-
-    .gribs2,
-    .gribs .privacy {
-        position: static;
-        width: 100%;
-        padding: 8px 0;
-    }
-
-    .gribs .privacy a {
-        display: block;
-        margin-bottom: 6px;
-    }
+  .gridmain {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  border: none; 
+  text-align: center;
+  align-items: center;
+  margin: auto;
 }
 
-@media screen and (min-width:950px) {
-    .mobilenav {
-        display: none;
-    }
+.gridmain > div {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #4b573e; 
+  padding: 16px;
+  background: transparent;
 }
+
+
+.gribs1 {
+  position: static;
+  grid-column: auto;
+  height: auto;
+  z-index: auto;
+  width: 100%;
+}
+
+.gribs1 .texttt {
+  position: static;
+  width: 100%;
+  margin: 0;
+  height: auto;
+  padding: 0;
+}
+
+.gribs1 .texttt input.h {
+  width: 100%;
+  max-width: 420px;
+    margin: 0 auto 12px;
+}
+}
+
+  .coaches .right1 p {
+    margin: 0 0 0 0;
+  }
+
+
+   
+
+
+
+    .grid {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.grid > div {
+  width: 100%;
+  min-height: 140px;
+  border: 1px solid #4b573e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: transparent;
+  position: relative;
+}
+
+.grid div h1 {
+  position: static;
+  top: auto;
+  left: auto;
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.maingrid {
+  height: auto;
+  padding-bottom: 24px;
+}
+
+.maingrid button {
+  position: static;
+  display: block;
+  margin: 18px auto 32px;
+  left: auto;
+  top: auto;
+}
+
+.gridmain {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  border: none; 
+  text-align: center;
+  align-items: center;
+  margin: auto;
+}
+
+.gridmain > div {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #4b573e; 
+  padding: 16px;
+  background: transparent;
+}
+
+
+.gribs1 {
+  position: static;
+  grid-column: auto;
+  height: auto;
+  z-index: auto;
+  width: 100%;
+}
+
+.gribs1 .texttt {
+  position: static;
+  width: 100%;
+  margin: 0;
+  height: auto;
+  padding: 0;
+}
+
+.gribs1 .texttt input.h {
+  width: 100%;
+  max-width: 420px;
+    margin: 0 auto 12px;
+}
+
+

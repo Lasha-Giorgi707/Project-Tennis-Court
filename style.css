@@ -292,8 +292,16 @@ z-index: 22;
     border: 1px solid gray;
     background-color: #4b573e;
     color: #FFF97D;
+    gap: 30px;
+}
+
+.section3 .jojo {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-left: 30px;
+    
 }
 
 .section3 .indiv {
@@ -308,17 +316,18 @@ gap: 50px;
     width: 33.33%;
     margin-top: 70px;
     
-    padding: 50px 20px 20px 20px;
+    
     
 }
 
 .section3 .indiv .mama {
     font-size: 30px;
+    
 }
 
 .section3 .indiv p {
     font-size: 20px;
-    padding-top: 10px;
+    padding-top: 30px;
 }
 
 .section2 {
@@ -731,7 +740,12 @@ footer h1 {
         text-align: center;
     }
 
-    .section3 {
+.section3 {
+    flex-direction: column;
+    height: auto;
+}
+
+    .section3 .jojo {
         flex-direction: column;
         height: auto;
         text-align: center;
